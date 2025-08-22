@@ -34,7 +34,7 @@ The custom DLL files used in this project are from untrusted sources. Their safe
 2. Extract the contents of the .zip file.
 3. Run the executable file.
 
-## Build from Source
+## Building from Source
 > [!CAUTION]
 > Only proceed if you have experience with building software from source.
 
