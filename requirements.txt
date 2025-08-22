@@ -1,3 +1,2 @@
 pyqt5
 pyinstaller
-pypiwin32
