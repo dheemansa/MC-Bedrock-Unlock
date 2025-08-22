@@ -1,67 +1,81 @@
-# MC Bedrock Unlocker
+<h1><img src="assets/icon/icon.png" alt="Logo" width="48"> MC Bedrock Unlocker</h1>
 
-A Windows application that automates the process of modifying system DLL files to unlock Minecraft Bedrock Edition features.
+![Python Version](https://img.shields.io/badge/python-3.13+-blue.svg)
 
-## ⚠️ IMPORTANT DISCLAIMER
+> **Note:** This is a proof-of-concept and educational tool. Use at your own risk.
 
-**This project is created for PROOF OF CONCEPT and EDUCATIONAL purposes only.** 
+<p align="center">
+  <img src="screenshots/Capture.PNG" alt="Screenshot">
+</p>
 
-- **No illegal intent** is associated with this software
-- The author does not encourage or endorse any illegal activities
-- Users are responsible for complying with their local laws and software licenses
-- This tool modifies Windows system files, which may violate Microsoft's Terms of Service
-- Use at your own risk and responsibility
+> [!IMPORTANT]   
+> # DISCLAIMER
+> - **This project is for educational and proof-of-concept purposes only.** 
+>- The developer does not endorse or encourage any illegal activities.
+>- Users are solely responsible for complying with all applicable laws and software licenses.
+>- This tool modifies core Windows system files, which may violate Microsoft's Terms of Service.
+>- Use this software at your own risk. The developer is not responsible for any damage to your system.
 
 ## Background
 
-This application automates a manual process that was demonstrated in a YouTube video by SSG channel: https://www.youtube.com/watch?v=6T-Yy4iEBMk
+This application automates a manual process for unlocking Minecraft Bedrock Edition features, as demonstrated in a YouTube video by the SSG channel.
 
-The custom DLL files used in this project are sourced from **untrusted sources** and their safety/legitimacy cannot be guaranteed. The author has simply created an automation tool to replace the manual process without requiring dependencies like IObit Unlocker.
+The custom DLL files used in this project are from untrusted sources. Their safety and legitimacy cannot be guaranteed. This tool is designed to automate the file replacement process without requiring external dependencies like IObit Unlocker.
 
 
 ## System Requirements
 
-- Windows 10/11 (32-bit or 64-bit)
-- Administrator privileges
-- Python 3.7+ (if running from source)
-- PyQt5 library (if running from source)
+- **Operating System:** Windows 10/11
+- **Python:** 3.7+ (for building from source)
+- **Libraries:** PyQt5, PyInstaller (for building from source)
 
 ## Installation & Usage
 
-### Method 1: Run from Source
-1. Install Python 3.7+
-2. Install required dependencies:
+1. Download the latest release from the [Releases](https://github.com/dheemansa/MC-Bedrock-Unlock/releases) page.
+2. Extract the contents of the .zip file.
+3. Run the executable file.
+
+## Build from Source
+> [!CAUTION]
+> Only proceed if you have experience with building software from source.
+
+1. **Install Python:** Version 3.13 or newer.
+2. **Clone the repository:**
    ```bash
-   pip install PyQt5
+   git clone https://github.com/dheemansa/MC-Bedrock-Unlock
+   cd MC-Bedrock-Unlock
    ```
-3. Place custom DLL files in the appropriate `dll/` subdirectories
-4. Right-click on Command Prompt/PowerShell and select "Run as Administrator"
-5. Navigate to the project directory
-6. Run: `python main.py`
+3. **Install dependencies:**
+   ```bash
+   pip install -r requirements.txt
+   ```
+4. **Build the executable:**
+   ```bash
+   pyinstaller main.spec
+   ```
 
-### Method 2: Executable (if available)
-1. Download the executable release
-2. Ensure DLL files are in the correct directory structure
-3. Right-click the executable and select "Run as Administrator"
+## ⚙️ How It Works
 
-## How It Works
+<details>
+<summary>Click to expand</summary>
 
 ### Unlock Process
-1. **File Detection**: Identifies target system DLL files based on architecture
-2. **Backup Creation**: Creates `.backup` files of original system DLLs
-3. **Ownership Transfer**: Uses `takeown` command to gain file ownership
-4. **Permission Modification**: Uses `icacls` to grant full administrator access
-5. **File Replacement**: Deletes original files and copies custom DLLs
-6. **Verification**: Confirms successful file replacement
+1. **File Detection**: Identifies the target system DLL files based on the system architecture.
+2. **Backup Creation**: Creates a `.backup` of the original system DLLs.
+3. **Ownership Transfer**: Uses the `takeown` command to gain ownership of the files.
+4. **Permission Modification**: Uses the `icacls` command to grant full administrator access.
+5. **File Replacement**: Deletes the original files and replaces them with the custom DLLs.
+6. **Verification**: Confirms that the file replacement was successful.
 
 ### Restore Process
-1. **SFC Execution**: Runs `sfc /scannow` command
-2. **System Verification**: Windows checks and restores modified system files
-3. **Original Files**: Restores Microsoft's original DLL files
+1. **SFC Execution**: Runs the `sfc /scannow` command.
+2. **System Verification**: Windows verifies the integrity of system files and restores the modified files to their original versions.
+
+</details>
 
 ## Target Files
 
-The application modifies these Windows system files:
+The application modifies the following Windows system files:
 
 **32-bit Systems:**
 - `C:\Windows\System32\Windows.ApplicationModel.Store.dll`
@@ -72,48 +86,43 @@ The application modifies these Windows system files:
 
 ## Security Warnings
 
-- **System File Modification**: This tool modifies critical Windows system files
-- **Unknown DLL Sources**: Custom DLLs are from untrusted sources
-- **Potential Risks**: May cause system instability or security vulnerabilities
-- **Backup Recommended**: Create a system restore point before use
-- **Antivirus Detection**: May be flagged as potentially unwanted software
+- **System File Modification**: This tool alters critical Windows system files.
+- **Unknown DLL Sources**: The custom DLLs are from untrusted sources.
+- **Potential Risks**: This may lead to system instability or security vulnerabilities.
+- **Backup Recommended**: It is highly recommended to create a system restore point before using this tool.
+- **Antivirus Detection**: This tool may be flagged as potentially unwanted software by antivirus programs.
 
 ## Legal Considerations
 
-- Modifying system files may violate Microsoft's Terms of Service
-- Using modified DLLs to bypass software restrictions may violate software licenses
-- Users are solely responsible for legal compliance in their jurisdiction
-- This tool is provided AS-IS without any warranties
+- Modifying system files may be a violation of Microsoft's Terms of Service.
+- Using modified DLLs to bypass software restrictions may violate software licenses.
+- Users are solely responsible for ensuring legal compliance in their jurisdiction.
+- This tool is provided "AS-IS" without any warranties.
 
 ## Technical Implementation
 
-- **Language**: Python 3.7+
+- **Language**: Python 3.13+
 - **GUI Framework**: PyQt5
-- **Threading**: QThread for non-blocking operations
-- **System Commands**: Windows takeown, icacls, sfc utilities
-- **Logging**: Python logging module with file and console output
 
 ## Troubleshooting
 
-**Common Issues:**
-- **Access Denied**: Ensure running as Administrator
-- **Missing DLLs**: Verify custom DLL files are in correct directories
-- **SFC Fails**: May require Windows installation media for some repairs
-- **Process Locked**: Restart system if files are in use
+- **Access Denied**: Ensure the application is run with administrator privileges.
+- **SFC Fails**: Try running `sfc /scannow` in an elevated Command Prompt or PowerShell.
+
 
 ## Contributing
 
-This is a proof-of-concept project. Contributions should focus on code quality and safety improvements rather than expanding functionality for potentially problematic use cases.
+This is a proof-of-concept project. Contributions that focus on improving code quality and safety are welcome.
 
 ## Credits
 
-- Original process demonstrated by SSG YouTube channel
-- Custom DLL files sourced from community (untrusted sources)
+- The original process was demonstrated by the SSG YouTube channel.
+- The custom DLL files were sourced from various online communities.
 
 ## License
 
-This project is provided for educational purposes. Users assume all responsibility for its use.
+This project is provided for educational purposes only. Users assume all responsibility for its use.
 
 ---
 
-**Remember: This tool modifies critical system files. Use with extreme caution and only if you understand the risks involved.**
+**Remember: This tool modifies critical system files. Use with extreme caution and only if you fully understand the risks involved.**
