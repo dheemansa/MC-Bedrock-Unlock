@@ -1,8 +1,7 @@
-<h1><img src="assets/icon/icon.png" alt="Logo" width="48"> MC Bedrock Unlocker</h1>
+<h1><img src="assets/icon/icon.png" alt="Logo" width="30"> MC Bedrock Unlocker</h1>
 
 ![Python Version](https://img.shields.io/badge/python-3.13+-blue.svg)
 
-> **Note:** This is a proof-of-concept and educational tool. Use at your own risk.
 
 <p align="center">
   <img src="screenshots/Capture.PNG" alt="Screenshot">
