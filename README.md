@@ -17,7 +17,7 @@
 
 ## Background
 
-This application automates a manual process for unlocking Minecraft Bedrock Edition features, as demonstrated in a YouTube video by the SSG channel.
+This application automates a manual process for unlocking Minecraft Bedrock Edition features, as demonstrated in a YouTube video by the [SSG channel](https://www.youtube.com/watch?v=6T-Yy4iEBMk).
 
 The custom DLL files used in this project are from untrusted sources. Their safety and legitimacy cannot be guaranteed. This tool is designed to automate the file replacement process without requiring external dependencies like IObit Unlocker.
 
@@ -25,7 +25,7 @@ The custom DLL files used in this project are from untrusted sources. Their safe
 ## System Requirements
 
 - **Operating System:** Windows 10/11
-- **Python:** 3.7+ (for building from source)
+- **Python:** 3.13+ (for building from source)
 - **Libraries:** PyQt5, PyInstaller (for building from source)
 
 ## Installation & Usage
@@ -125,7 +125,7 @@ This is a proof-of-concept project. Contributions that focus on improving code q
 
 ## Credits
 
-- The original process was demonstrated by the SSG YouTube channel.
+- The original process was demonstrated by the [SSG YouTube channel](https://www.youtube.com/watch?v=6T-Yy4iEBMk).
 - The custom DLL files were sourced from various online communities.
 
 ## License
