@@ -35,6 +35,9 @@ The custom DLL files used in this project are from untrusted sources. Their safe
 3. Run the executable file.
 
 ## Building from Source
+<details>
+
+<summary>Click to expand</summary>
 > [!CAUTION]
 > Only proceed if you have experience with building software from source.
 
@@ -52,6 +55,7 @@ The custom DLL files used in this project are from untrusted sources. Their safe
    ```bash
    pyinstaller main.spec
    ```
+</details>
 
 ## ⚙️ How It Works
 
