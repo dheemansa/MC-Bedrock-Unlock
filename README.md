@@ -38,6 +38,7 @@ The custom DLL files used in this project are from untrusted sources. Their safe
 <details>
 
 <summary>Click to expand</summary>
+
 > [!CAUTION]
 > Only proceed if you have experience with building software from source.
 
