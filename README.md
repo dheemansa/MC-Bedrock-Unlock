@@ -34,6 +34,9 @@ The custom DLL files used in this project are from untrusted sources. Their safe
 2. Extract the contents of the .zip file.
 3. Run the executable file.
 
+> [!IMPORTANT]   
+> You might need to use this tool again after a Windows update, as the update may replace the modified files. 
+
 ## ⚙️ How It Works
 
 <details>
@@ -124,6 +127,10 @@ If you encounter any bugs or issues, please submit a detailed report on the [Iss
 ## Contributing
 
 This is a proof-of-concept project. Contributions that focus on improving code quality and safety are welcome.
+
+## Help Wanted
+
+I am looking for help in understanding how the modified DLLs used in this project are made. If you have any knowledge in this area and are willing to share, please contact me.
 
 ## Credits
 
