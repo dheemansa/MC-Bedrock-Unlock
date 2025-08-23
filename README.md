@@ -34,27 +34,6 @@ The custom DLL files used in this project are from untrusted sources. Their safe
 2. Extract the contents of the .zip file.
 3. Run the executable file.
 
-## Building from Source
-
-
-> [!CAUTION]
-> Only proceed if you have experience with building software from source.
-
-1. **Install Python:** Version 3.13 or newer.
-2. **Clone the repository:**
-   ```bash
-   git clone https://github.com/dheemansa/MC-Bedrock-Unlock
-   cd MC-Bedrock-Unlock
-   ```
-3. **Install dependencies:**
-   ```bash
-   pip install -r requirements.txt
-   ```
-4. **Build the executable:**
-   ```bash
-   pyinstaller main.spec
-   ```
-
 ## ⚙️ How It Works
 
 <details>
@@ -104,6 +83,27 @@ The application modifies the following Windows system files:
 
 - **Language**: Python 3.13+
 - **GUI Framework**: PyQt5
+
+## Building from Source
+
+> [!CAUTION]
+> Only proceed if you have experience with building software from source.
+
+1. **Install Python:** Version 3.13 or newer.
+2. **Clone the repository:**
+   ```bash
+   git clone https://github.com/dheemansa/MC-Bedrock-Unlock
+   cd MC-Bedrock-Unlock
+   ```
+3. **Install dependencies:**
+   ```bash
+   pip install -r requirements.txt
+   ```
+4. **Build the executable:**
+   ```bash
+   pyinstaller main.spec
+   ```
+
 
 ## Troubleshooting
 
